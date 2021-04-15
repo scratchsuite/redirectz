@@ -68,7 +68,7 @@ var type = urlSearchParams.get("t")
 var ugcD = urlSearchParams.get("d")
 if (types[type] && ugcD) {
   var data = types[type]
-
+  document.title = "Redirecting you to: " + data.name
   if (data.url) {
     window.location.replace(`${data.url}${ugcD}`)
   }
